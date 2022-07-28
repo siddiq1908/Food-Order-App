@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="9dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_image_see_more_recommended"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cheese_pizza"
+            app:layout_constraintBaseline_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+            <TextView
+                android:id="@+id/item_name_see_more_recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pasta"
+                android:textColor="#3A3A3A"
+                android:textSize="18sp"
+                android:fontFamily="@font/open_sans_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".15" />
+
+            <RatingBar
+                android:id="@+id/ratingBar_see_more_recommended"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/item_name_see_more_recommended"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/item_name_see_more_recommended" />
+
+            <TextView
+                android:id="@+id/item_rating_see_more_recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="4.0"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar_see_more_recommended"
+                app:layout_constraintEnd_toStartOf="@+id/ratingBar_see_more_recommended"
+                app:layout_constraintTop_toTopOf="@+id/ratingBar_see_more_recommended" />
+
+            <TextView
+                android:id="@+id/item_price_see_more_recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="₹49"
+                android:textColor="#007944"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/item_name_see_more_recommended"
+                app:layout_constraintTop_toBottomOf="@+id/item_name_see_more_recommended" />
+
+            <ImageView
+                android:id="@+id/item_cart_see_more_recommended"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ratingBar_see_more_recommended"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar_see_more_recommended"
+                app:srcCompat="@drawable/add_to_cart" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
